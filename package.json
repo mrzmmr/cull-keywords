@@ -1,0 +1,50 @@
+{
+  "name": "cull-keywords",
+  "version": "1.0.0",
+  "description": "returns an array of keywords / keyphrases from a string.",
+  "main": "_index.js",
+  "scripts": {
+    "babel": "babel index.js -o _index.js && babel test.js -o _test.js",
+    "test": "nyc npm run tape",
+    "pretape": "npm run babel",
+    "tape": "tape _test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrzmmr/cull-keywords.git"
+  },
+  "keywords": [
+    "cull-keywords",
+    "keywords",
+    "keyphrases",
+    "string",
+    "extract",
+    "pull"
+  ],
+  "author": "mrzmmr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrzmmr/cull-keywords/issues"
+  },
+  "homepage": "https://github.com/mrzmmr/cull-keywords#readme",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "xo": {
+    "space": true
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "codecov": "^1.0.1",
+    "nyc": "^10.1.2",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "nlcst-to-string": "^2.0.0",
+    "retext": "^4.0.0",
+    "retext-keywords": "^3.1.0"
+  }
+}
