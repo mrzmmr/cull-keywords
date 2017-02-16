@@ -1,6 +1,6 @@
 # cull-keywords
 
-> returns an `object` of keywords / keyphrases from a string.
+> returns an object of keywords / keyphrases from a string.
 
 [![CircleCI](https://img.shields.io/circleci/project/github/mrzmmr/cull-keywords.svg)](https://circleci.com/gh/mrzmmr/cull-keywords/)
 [![Codecov](https://img.shields.io/codecov/c/github/mrzmmr/cull-keywords.svg)](https://codecov.io/gh/mrzmmr/cull-keywords)
@@ -41,12 +41,8 @@ cullKeywords(string, (err, results) => {
 
 /* Using promises */
 cullKeywords(string, 'format')
-  .then(results => {
-    ...
-  })
-  .catch(err => {
-    ...
-  })
+  .then(results => ... )
+  .catch(err => ... )
 
 ```
 
