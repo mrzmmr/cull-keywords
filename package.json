@@ -1,7 +1,7 @@
 {
   "name": "cull-keywords",
   "version": "1.0.0",
-  "description": "returns an array of keywords / keyphrases from a string.",
+  "description": "returns an `object` of keywords / keyphrases from a string.",
   "main": "_index.js",
   "scripts": {
     "babel": "babel index.js -o _index.js && babel test.js -o _test.js",

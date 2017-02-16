@@ -1,6 +1,6 @@
 # cull-keywords
 
-> returns an array of keywords / keyphrases from a string.
+> returns an `object` of keywords / keyphrases from a string.
 
 [![CircleCI](https://img.shields.io/circleci/project/github/mrzmmr/cull-keywords.svg)](https://circleci.com/gh/mrzmmr/cull-keywords/)
 [![Codecov](https://img.shields.io/codecov/c/github/mrzmmr/cull-keywords.svg)](https://codecov.io/gh/mrzmmr/cull-keywords)
@@ -61,6 +61,8 @@ The format option removes apostrophes and replaces spaces with hyphens.
 -   `string` ([String] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)) - String to work on
 -   `options` ([Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), optional) - Options object or options name as a string.
 -   `callback` ([Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), optional) - Callback function
+
+If no callback is passed then a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is returned.
 
 ###### Returns
 
