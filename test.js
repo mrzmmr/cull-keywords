@@ -1,17 +1,15 @@
 'use strict'
 
-const cullKeywords = require('./_index.js')
 const tape = require('tape')
+const cullKeywords = require('./_index.js')
 
 const expected = {
-  keywords: [ 'MTV', 'Quick', 'fox', 'jumps', 'quack', 'quiz', 'zephyrs' ],
-  keyphrases: [ 'Alex Trebek\'s fun TV quiz game', 'Junk MTV quiz',
-    'MTV ax quiz prog', 'Quick', 'fox' ]
+  keywords: ['MTV', 'Quick', 'fox', 'jumps', 'quack', 'quiz', 'zephyrs'],
+  keyphrases: ['Alex Trebek\'s fun TV quiz game', 'Junk MTV quiz',
+    'MTV ax quiz prog', 'Quick', 'fox']
 }
 
 const format = array => array.map(key => key.replace('\'', '').split(' ').join('-'))
-const expectedKeywords = expected[0]
-const expectedKeyphrases = expected[1]
 
 var string =
 `
@@ -32,8 +30,7 @@ vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game
 . Woven silk pyjamas exchanged for blue quartz. Brawny gods just
 `
 
-tape('cull-keywords', (test) => {
-
+tape('cull-keywords', test => {
   /*
    * Should Error
    */

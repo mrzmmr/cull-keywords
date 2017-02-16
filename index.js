@@ -12,12 +12,11 @@ const defaults = {
 
 const doop = () => {}
 
-const cullKeywords = (string='', options=defaults, cb=doop) => {
+const cullKeywords = (string = '', options = defaults, cb = doop) => {
   let keyphrases
   let keywords
   let settings
   let returns
-  let error
   let vfile
 
   if (!string || typeof string !== 'string' || string.length === 0) {
@@ -25,7 +24,7 @@ const cullKeywords = (string='', options=defaults, cb=doop) => {
   }
 
   if (typeof options === 'string') {
-    settings = Object.assign(defaults, {[ options ]: true})
+    settings = Object.assign(defaults, {[options]: true})
   } else {
     settings = Object.assign(defaults, options)
   }
@@ -48,22 +47,21 @@ const cullKeywords = (string='', options=defaults, cb=doop) => {
   }
 
   if (settings.keywords) {
-    Object.assign(returns, { keywords })
+    Object.assign(returns, {keywords})
   }
 
   if (settings.keyphrases) {
-    Object.assign(returns, { keyphrases })
+    Object.assign(returns, {keyphrases})
   }
 
   if (!settings.keyphrases && !settings.keywords) {
-    Object.assign(returns, { keywords, keyphrases })
+    Object.assign(returns, {keywords, keyphrases})
   }
 
   return cb(null, returns)
 }
 
-
-module.exports = (string='', options=defaults, cb=doop) => {
+module.exports = (string = '', options = defaults, cb = doop) => {
   if (typeof options === 'function') {
     cb = options
     options = defaults
