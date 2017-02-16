@@ -5,9 +5,11 @@
   "main": "_index.js",
   "scripts": {
     "babel": "babel index.js -o _index.js && babel test.js -o _test.js",
+    "posttest": "npm run coverage",
     "test": "nyc npm run tape",
     "pretape": "npm run babel",
-    "tape": "tape _test.js"
+    "tape": "tape _test.js",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
