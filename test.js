@@ -108,5 +108,9 @@ tape('cull-keywords', test => {
     test.deepEqual(res.keywords, format(expected.keywords))
   })
 
+  test.ok(typeof cullKeywords.doop === 'function')
+  test.ok(cullKeywords.doop.name === 'doop')
+  test.notOk(cullKeywords.doop())
+
   test.end()
 })

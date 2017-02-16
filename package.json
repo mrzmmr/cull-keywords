@@ -1,7 +1,7 @@
 {
   "name": "cull-keywords",
-  "version": "1.0.0",
-  "description": "returns an `object` of keywords / keyphrases from a string.",
+  "version": "1.0.3",
+  "description": "returns an object of keywords / keyphrases from a string.",
   "main": "_index.js",
   "scripts": {
     "babel": "babel index.js -o _index.js && babel test.js -o _test.js",
@@ -32,7 +32,11 @@
   "babel": {
     "presets": [
       "env"
-    ]
+    ],
+    "sourceMaps": "inline"
+  },
+  "nyc": {
+    "sourceMap": true
   },
   "xo": {
     "space": true

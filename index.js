@@ -80,3 +80,5 @@ module.exports = (string = '', options = defaults, cb = doop) => {
     })
   })
 }
+
+module.exports.doop = doop
